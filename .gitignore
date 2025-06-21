@@ -1,0 +1,6 @@
+# Common folders to ignore
+node_modules/
+dist/
+.parcel-cache/
+*.log
+.DS_Store

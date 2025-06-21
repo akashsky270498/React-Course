@@ -1,0 +1,62 @@
+/* 📦 Style for each individual product card */
+.card {
+  width: 250px; /* Fixed width for all cards */
+  border: 1px solid #ddd; /* Light border around the card */
+  border-radius: 12px; /* Rounded corners for the card */
+  overflow: hidden; /* Ensures child elements (like image) don't overflow outside */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: white; /* White background for contrast */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth animation on hover */
+}
+
+/* 🖱️ Hover effect: slightly lift the card and increase shadow */
+.card:hover {
+  transform: translateY(-5px); /* Moves the card up slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bigger shadow when hovering */
+}
+
+/* 🖼️ Style for the product image inside the card */
+.card img {
+  width: 100%; /* Makes image full width of the card */
+  height: 160px; /* Fixed height for consistency across cards */
+  object-fit: cover; /* Ensures the image fills the space nicely */
+  border-bottom: 1px solid #eee; /* Light line between image and text */
+  display: block; /* Removes extra space below image (from inline-block) */
+}
+
+/* 📃 Container for the card text content */
+.card-content {
+  padding: 12px 16px; /* Inner spacing for the text area */
+}
+
+/* 🏷️ Product title styling */
+.card h4 {
+  margin: 0 0 8px; /* No top margin, small space below */
+  font-size: 1.1rem; /* Slightly larger font for title */
+  font-weight: 600; /* Bold text */
+  color: #333; /* Dark gray text for good readability */
+}
+
+/* 🏷️ Brand and price text styling */
+.card p {
+  margin: 4px 0; /* Small vertical spacing */
+  font-size: 0.95rem; /* Slightly smaller than default */
+  color: #666; /* Medium gray text */
+}
+
+/* 💰 Styling specifically for the price */
+.card p b {
+  color: #000; /* Pure black for emphasis */
+  font-size: 1rem; /* Normal readable size */
+}
+
+/* 🧱 Flex container for all cards */
+.container {
+  display: flex; /* Enables flexbox layout */
+  flex-wrap: wrap; /* Allows cards to wrap to next row if needed */
+  gap: 12px; /* Space between cards */
+  justify-content: center; /* Center all cards horizontally */
+  padding: 12px; /* Space around the entire container */
+  background-color: #f9f9f9; /* Light gray background for contrast */
+  min-height: 100vh; /* Makes sure page fills the full viewport height */
+}
