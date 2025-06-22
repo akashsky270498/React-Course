@@ -2,7 +2,7 @@ import Counter from "./components/Counter";
 const App = () => {
   return (
     <div>
-      <Counter />
+      <Counter counterName = "Timer"/>
     </div>
   );
 };

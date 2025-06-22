@@ -1,10 +1,10 @@
-import { PureComponent, useState } from "react";
-import "../css/style.css"
-const Counter = () => {
+import { useState } from "react";
+import "../css/style.css";
+const Counter = ({ counterName }) => {
   const [count, setCount] = useState(0);
   const [string, setString] = useState("welcome");
 
-  console.log("Rendering");
+  console.log("counterName: ", counterName);
   return (
     <>
       <h2>{count}</h2>
@@ -16,7 +16,9 @@ const Counter = () => {
           setString(() => "React");
           setString(() => "JS");
         }}
-      >Click Here!</button>
+      >
+        Click Here!
+      </button>
       <h2>{string}</h2>
     </>
   );
