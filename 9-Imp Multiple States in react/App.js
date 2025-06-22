@@ -1,10 +1,18 @@
 import Counter from "./components/Counter";
+import { Fragment } from "react";
+
+console.log(Fragment) // Symbol.for(React.fragment:::::: Datatype of Fragment is Symbol
 const App = () => {
   return (
-    <div>
-      <Counter counterName = "Timer"/>
-    </div>
+    <Fragment>
+      <Counter counterName="Timer" />
+    </Fragment>
   );
 };
 
 export default App;
+
+
+/*
+<></> === <Fragment></Fragment>
+*/
