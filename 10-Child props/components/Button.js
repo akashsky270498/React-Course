@@ -1,3 +1,4 @@
+import styles from "../css/AppleCounter.module.css"
 const Button = ({
   imageUrl,
   buttonName,
@@ -6,7 +7,7 @@ const Button = ({
   clickHandler,
 }) => {
   return (
-    <button onClick={clickHandler} title={buttonTitle}>
+    <button className={styles.button} onClick={clickHandler} title={buttonTitle}>
       {children}
       <img src={imageUrl} alt={buttonName} />
     </button>

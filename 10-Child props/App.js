@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div>
       <Counter counterName="Timer">
-        <AppleCounter />
+        <AppleCounter />  // We can pass anything as children: components, elements, strings, numbers, arrays, even functions.
       </Counter>
     </div>
   );
