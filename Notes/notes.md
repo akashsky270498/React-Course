@@ -168,3 +168,28 @@ items.map(item => <li key={item.id}>{item.name}</li>)
 * Small functions that return part of the UI.
 * Can be reused anywhere in the app.
 
+
+ ### ✅ State vs Props
+
+State is a local variable for a component.
+
+It is mutable, which means it can be changed using useState().
+
+Used for internal data management inside a component.
+
+Props are values passed from parent to child components.
+
+They are immutable (cannot be changed directly inside child component).
+
+Think of props as parent’s state given to child.
+
+If needed, you can change the value by lifting the state up and modifying it in the parent.
+
+
+### ✅  Fragment
+
+A Fragment lets you group multiple elements without adding extra nodes to the DOM.
+
+It is of type: Symbol(react.fragment)
+
+You can also use: Symbol.for("react.fragment")
