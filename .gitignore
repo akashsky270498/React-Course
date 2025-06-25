@@ -4,3 +4,4 @@ dist/
 .parcel-cache/
 *.log
 .DS_Store
+/resume.html
