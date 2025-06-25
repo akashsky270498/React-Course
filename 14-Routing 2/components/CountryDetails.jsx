@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/style2.css";
+import Shimmer from "./shimmer";
 
 const CountryDetails = () => {
   const navigate = useNavigate();
@@ -29,9 +30,11 @@ const CountryDetails = () => {
         });
       });
   }, []);
-  return countryData === null ? (
-    "loading..."
-  ) : (
+  // return countryData === null ? (
+  //   "loading..."
+  // ) : (
+      return !countryData ? (<Shimmer />) : (
+
     <main>
       <div className="countryDetailsContainer">
         <span className="backButton" onClick={() => {navigate(-1)}}>
