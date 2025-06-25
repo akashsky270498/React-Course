@@ -1,4 +1,4 @@
-.shimmer-box {
+/* .shimmer-box {
   background: #f6f7f8;
   background-image: linear-gradient(
     to right,
@@ -46,4 +46,79 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+} */
+
+
+/* Variables for theme support */
+:root {
+  --shimmer-bg: #dddddd;
+  --shimmer-highlight: #eeeeee;
+}
+
+[data-theme="dark"] {
+  --shimmer-bg: #2c2c2c;
+  --shimmer-highlight: #444444;
+}
+
+/* Shimmer Animation */
+.shimmer-box {
+  background-color: var(--shimmer-bg);
+  background-image: linear-gradient(
+    to right,
+    var(--shimmer-bg) 0%,
+    var(--shimmer-highlight) 20%,
+    var(--shimmer-bg) 40%,
+    var(--shimmer-bg) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 1000px 100%;
+  animation: shimmer 1.5s infinite linear;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  margin: 10px 0;
+  transition: background-color 0.3s;
+}
+
+/* Shimmer animation keyframes */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Flag placeholder size */
+.shimmer-flag {
+  width: 300px;
+  height: 200px;
+}
+
+/* Title placeholder */
+.shimmer-title {
+  width: 200px;
+  height: 25px;
+  margin: 16px 0;
+}
+
+/* Text line placeholder */
+.shimmer-line {
+  width: 90%;
+  height: 16px;
+  border-radius: 4px;
+}
+
+/* Grouping lines */
+.shimmer-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Card-style placeholder (for list/grid loading) */
+.shimmer-card {
+  width: 250px;
+  height: 300px;
+  margin: 10px;
 }
