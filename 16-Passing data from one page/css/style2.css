@@ -1,0 +1,167 @@
+/* CountryDetails Container */
+.countryDetailsContainer {
+  padding: 2rem;
+}
+
+/* Back Button */
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s ease;
+  margin-bottom: 2rem;
+  color: #111517;
+}
+
+.backButton:hover {
+  background-color: #f0f0f0;
+}
+
+/* Country Details Wrapper */
+.countryDetails {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Country Flag */
+.countryDetails img {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Container */
+.detailsTextContainer {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Country Name */
+.detailsTextContainer h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #111517;
+}
+
+/* Details Text */
+.detailsText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.detailsText p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.detailsText b {
+  font-weight: 600;
+  color: #333333;
+}
+
+.borderCountries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  line-height: 1.6;
+  font-weight: 600;
+  color: #333333;
+  margin-top: 8px;
+}
+
+.borderCountries a {
+  padding: 4px 12px;
+  background-color: #ffffff;
+  color: #111517;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.borderCountries a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .countryDetails {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .detailsTextContainer h2 {
+    text-align: center;
+  }
+
+  .detailsText {
+    text-align: center;
+  }
+
+  .backButton {
+    margin-bottom: 1rem;
+  }
+}
+
+/* -------------------------------------- */
+/* DARK MODE SUPPORT */
+/* -------------------------------------- */
+
+body.dark main {
+  background-color: #202c37;
+  color: #ffffff;
+}
+
+body.dark .countryDetailsContainer {
+  background-color: transparent;
+}
+
+body.dark .countryDetails {
+  background-color: #2b3945;
+  color: #ffffff;
+}
+
+body.dark .backButton {
+  background-color: #2b3945;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .backButton:hover {
+  background-color: #3c4a57;
+}
+
+body.dark .detailsTextContainer h2,
+body.dark .detailsText p b {
+  color: #ffffff;
+}
+
+body.dark .detailsText p {
+  color: #dddddd;
+}
+
+body.dark .borderCountries a {
+  background-color: #2b3945;
+  color: #ffffff;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .borderCountries a:hover {
+  background-color: #3c4a57;
+}
