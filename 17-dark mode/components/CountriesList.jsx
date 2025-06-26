@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 // import countriesData from '../countriesData'
-import CountryCard from './CountryCard'
-import CountriesListShimmer from './CountriesListShimmer'
+import CountryCard from "./CountryCard";
+import CountriesListShimmer from "./CountriesListShimmer";
 
 export default function CountriesList({ query }) {
-  const [countriesData, setCountriesData] = useState([])
+  const [countriesData, setCountriesData] = useState([]);
 
   useEffect(() => {
-    fetch('https://restcountries.com/v3.1/all')
+    fetch(
+      "https://restcountries.com/v3.1/all?fields=name,capital,flags,region,population,borders,tld,nativeName,currencies,languages"
+    )
       .then((res) => res.json())
       .then((data) => {
-        setCountriesData(data)
-      })
-  }, [])
+        setCountriesData(data);
+      });
+  }, []);
 
   if (!countriesData.length) {
-    return <CountriesListShimmer />
+    return <CountriesListShimmer />;
   }
 
   return (
@@ -36,9 +38,9 @@ export default function CountriesList({ query }) {
                 capital={country.capital?.[0]}
                 data={country}
               />
-            )
+            );
           })}
       </div>
     </>
-  )
+  );
 }
