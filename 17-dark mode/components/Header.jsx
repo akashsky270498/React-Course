@@ -1,9 +1,12 @@
+import { useContext } from "react";
+import { ThemeContext } from "../contexts/ThemeContext";
+
 export default function Header({ theme }) {
   // const [isDark, setIsDark] = useState(
   //   JSON.parse(localStorage.getItem("isDarkMode"))
   // );
 
-  const [isDark, setIsDark] = theme;
+  // const [isDark, setIsDark] = theme;
 
   // console.log(JSON.parse(localStorage.getItem('isDarkMode')))
 
@@ -12,6 +15,7 @@ export default function Header({ theme }) {
   // } else {
   //   document.body.classList.remove("dark");
   // }
+  const [isDark, setIsDark] = useContext(ThemeContext);
 
   return (
     <header className={`header-container ${isDark ? "dark" : ""}`}>
