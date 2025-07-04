@@ -1,8 +1,11 @@
 const ContextMenu = ({ menuPosition, setMenuPosition, setExpenses, rowId }) => {
-  if (!("left" in menuPosition && "top" in menuPosition)) return null;
-  // if (!menuPosition.left) return
+ if (!("left" in menuPosition && "top" in menuPosition)) return null;
   return (
-    <div className="context-menu" style={{ ...menuPosition }}>
+    <div className="context-menu"  style={{
+        top: `${menuPosition.top}px`,
+        left: `${menuPosition.left}px`,
+        position: "absolute", // ensure absolute positioning
+      }}>
       <div
         onClick={() => {
           console.log("Editiing");
