@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Modal from "./Modal";
 
-const Contact = () => {
+export const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
@@ -41,5 +41,3 @@ const Contact = () => {
     </>
   );
 };
-
-export default Contact;
