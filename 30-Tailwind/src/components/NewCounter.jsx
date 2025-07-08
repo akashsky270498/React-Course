@@ -1,8 +1,21 @@
+import { useEffect } from "react";
 import { useState } from "react";
 
 const NewCounter = ({ name }) => {
   const [count, setCount] = useState(0);
   const [count2, setCount2] = useState(0);
+
+  useEffect(() => {
+    const timerId = setInterval(() => {
+      console.log("hihihi");
+      console.log("mount and update both happens inside useEffect");
+    }, 1000);
+
+    return () => {
+      console.log("Clean up function => unmount");
+      clearInterval(timerId);
+    };
+  }, []);
 
   return (
     <>
